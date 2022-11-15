@@ -3,8 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-body {
-    background-color: #fefefe;
+.dark-mode {
+    background-color: #222;
+    color: #fefefe;
 }
 .split {
     height: 100%;
@@ -21,11 +22,17 @@ body {
     position: absolute;
     background: linear-gradient(360deg, rgba(136,69,234,1) 35%, rgba(64,71,216,1) 100%);
 }
+.dark-mode .left-container {
+    background: linear-gradient(180deg, rgba(136,69,234,1) 35%, rgba(64,71,216,1) 100%);
+}
 #logo {
     margin: auto;
     padding-left: 40px;
     color: #fefefe;
     font-size: 48px;
+}
+.dark-mode #logo {
+    color: #222;
 }
 .search-box {
     position: relative;
@@ -33,6 +40,10 @@ body {
     left: 25%;
     top: 480px;
     display: flex;
+}
+.dark-mode input {
+    background-color: #222;
+    color: #fefefe;
 }
 .search-box input{
     padding: 10px;
@@ -47,16 +58,30 @@ body {
     margin: 10px;
     width: 120px;
     background-color: #ae9cff;
+    color: #fefefe;
     border: none;
     outline: none;
-    color: #ffffff;
     border-radius: 5px;
     font-size: 16px;
+}
+.dark-mode button {
+    color: #222;
 }
 /* Right portion of application */
 .right-container {
     right: 0;
-    background-color: #fefefe;
+}
+.dark-mode-icon {
+    background: url(/assets/dark-mode.png);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-right: 40px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 .result {
     position: relative;
@@ -66,6 +91,8 @@ body {
 }
 .result h3 {
     font-size: 30px;
+}
+.result .dark-mode h3 {
     color: #222222;
 }
 .result .word {
@@ -75,6 +102,7 @@ body {
 }
 .result button {
     background-color: transparent;
+    background-image: url();
     color: #ae9cff;
     width: 50px;
     border: none;
@@ -89,16 +117,23 @@ body {
     margin: 5px 0 20px 0;
     font-size: 16px;
 }
-.definition {
-    display: flex;
+.word-def .dark-mode    {
     color: #222222;
+    padding-bottom: 20px;
 }
 .example {
     display: flex;
-    color: #222222;
-    font-style: italic;
+    
+font-style: italic;
     border-left: 5px solid #ae9cff;
     padding-left: 20px;
     margin-top: 30px;
+}
+.example .dark-mode    {
+    color: #222222;
+}
+
+button {
+    cursor: pointer;
 }
 
