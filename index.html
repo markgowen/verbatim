@@ -4,24 +4,40 @@
         <title>Phase-1 Project</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        <!-- Google Fonts -->
+        <!-- Stylesheet -->
         <link href="styles.css" rel="stylesheet">
         <script defer src="src/index.js"></script>
     </head>
     <body>
-        <section id="left-container">
+        <audio id="sound"></audio>
+        <div class="split left-container">
             <h2 id="logo">verbatim</h2>
-            <div id="search-box">
+            <div class="search-box">
                 <input type="text" id="search-term" placeholder="Type the word here.." />
                 <button id="search-btn">Search</button>
             </div>
-        </section>
-        <section id="right-container">
+        </div>
+        <div class="split right-container">
             <div id="dark-mode">
-                <img src="/assets/dark-mode.png" class="dark-mode-icon" />
+                <!-- <img src="/assets/dark-mode.png" class="dark-mode-icon" /> -->
             </div>
-            <div id="result">
-                <audio id="sound"></audio>
+            <div class="result" id="result">
+                <div class="word">
+                    <h3>Sample</h3>
+                    <button>
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>
+                <div class="details">
+                    <p>pos</p>
+                    <p>/sample/</p>
+                </div>
+                <p class="definition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, culpa?</p>
+                <p class="example"></p>
             </div>
-        </section>
+        </div>
     </body>
 </html>

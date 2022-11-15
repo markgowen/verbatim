@@ -1,42 +1,48 @@
-body {
+* {
+    padding: 0;
     margin: 0;
-    background-color: #fefefe;
-    display: grid;
-    grid-template-columns: 50vw 100vh 50vw 100vh;
+    box-sizing: border-box;
 }
-
+body {
+    background-color: #fefefe;
+}
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
 /* Left portion of application */
-#left-container {
-    display: grid;
-    grid-column: 1;
-    
-    /* height: 100vh;  */
+.left-container {
+    left: 0;
+    position: absolute;
     background: linear-gradient(360deg, rgba(136,69,234,1) 35%, rgba(64,71,216,1) 100%);
 }
-
 #logo {
+    margin: auto;
+    padding-left: 40px;
     color: #fefefe;
     font-size: 48px;
-    margin: 40px;
 }
-
-
-#search-box {
+.search-box {
+    position: relative;
     width: 50%;
-    margin: 0 auto;
-    
+    left: 25%;
+    top: 480px;
+    display: flex;
 }
-
-#search-term {
+.search-box input{
     padding: 10px;
     width: 70%;
     border: none;
     outline: none;
-    border-bottom: 3px solid;
+    border-radius: 5px;
     font-size: 16px;
 }
-
-#search-btn {
+.search-box button {
     padding: 15px 0;
     margin: 10px;
     width: 120px;
@@ -47,48 +53,52 @@ body {
     border-radius: 5px;
     font-size: 16px;
 }
-
 /* Right portion of application */
-#right-container {
-    display: grid;
-    grid-column: 2;
-    /* width: 50%; */
+.right-container {
+    right: 0;
+    background-color: #fefefe;
 }
-
-#dark-mode {
-    margin: auto;
-    width: 100%;
+.result {
+    position: relative;
+    width: 50%;
+    left: 25%;
+    top: 480px;
 }
-
-.dark-mode-icon {
-    width: 45px;
-    height: 45px;
-    float: right;
+.result h3 {
+    font-size: 30px;
+    color: #222222;
 }
-
-/* #result {
-    margin: auto;
-} */
-
-
-
-h1 {
-    padding: 100px;
-    font-size: 40px;
-}
-
-.phonetic {
-    color: lightgray;
-}
-
-.details {
+.result .word {
     display: flex;
-    gap: 10px;
-    color: #b3b6d4;
-    margin: 5px 0 20px 0;
-    font-size: 14px;
+    justify-content: space-between;
+    
 }
-
-.definition {
+.result button {
+    background-color: transparent;
+    color: #ae9cff;
+    width: 50px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.result .details {
+    display: flex;
+    /* padding-top: 10px; */
+    gap: 10px;
+    color: lightgrey;
+    margin: 5px 0 20px 0;
     font-size: 16px;
 }
+.definition {
+    display: flex;
+    color: #222222;
+}
+.example {
+    display: flex;
+    color: #222222;
+    font-style: italic;
+    border-left: 5px solid #ae9cff;
+    padding-left: 20px;
+    margin-top: 30px;
+}
+
