@@ -15,7 +15,6 @@ function init() {
 }
 
 function renderResult(element) {
-    
     let result = document.querySelector(".result");
     const word = document.querySelector(".word");
     const details = document.querySelector(".details");
@@ -31,8 +30,8 @@ function renderResult(element) {
     const soundIcon = document.createElement("button");
     const icon = document.createElement("i");
 
-    icon.className = ("fas fa-volume-up")
-    soundIcon.append(icon)
+    icon.className = ("fas fa-volume-up");
+    soundIcon.append(icon);
     
     const term = document.createElement("h3");
     term.innerHTML = element.word;
