@@ -15,32 +15,36 @@ function init() {
 }
 
 function renderResult(element) {
-    const result = document.querySelector("#result");
-    const word = document.createElement("h1");
-    const phonetic = document.createElement("p");
-    const sound = document.querySelector("#sound");
-    const soundIcon = document.createElement("button");
-    
-    sound.setAttribute("src", `${element.phonetics[0].audio}`);
-    
-    phonetic.classList.add("phonetic")
+    const result = document.querySelector(".result");
+    const details = document.querySelector(".details");
+    const word = document.querySelector(".word");
 
-    word.innerHTML = element.word;
+    const sound = document.querySelector("#sound");
+    sound.setAttribute("src", `${element.phonetics[0].audio}`);
+
+    const soundIcon = document.createElement("button");
     soundIcon.innerText = "Play"
+    
+    const term = document.createElement("h3");
+    term.innerHTML = element.word;
+    
+    const phonetic = document.createElement("p");
     phonetic.innerHTML = element.phonetic;
 
-    result.append(word, soundIcon, phonetic)
-
+    const partOfSpeech = document.createElement("p");
+    partOfSpeech.innerText = element.meanings[0].partOfSpeech;
+    
+    details.append(phonetic, partOfSpeech)
+    word.append(sound, soundIcon, term)
+    result.append(word, soundIcon, details)
+    
     // setting all definitions for each word
     element.meanings.forEach((meaning) => {
-        const partOfSpeech = document.createElement("p.partOfSpeech");
-        partOfSpeech.classList.add("details");
+        
+        // const synonyms = document.createElement("p");
+        // synonyms.classList.add("details")
 
-        const synonyms = document.createElement("p.synonyms");
-        synonyms.classList.add("details")
-
-        partOfSpeech.innerText = meaning.partOfSpeech;
-        synonyms.innerText = meaning.synonyms;
+        // synonyms.innerText = meaning.synonyms;
 
         meaning.definitions.forEach((definitions) => {
             const definition = document.createElement("p");
@@ -50,7 +54,6 @@ function renderResult(element) {
             
             result.append(definition)
         })
-        result.append(partOfSpeech, synonyms)
     })
     
     soundIcon.addEventListener("click", () => {

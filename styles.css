@@ -83,7 +83,7 @@ body {
 }
 .result .details {
     display: flex;
-    /* padding-top: 10px; */
+    padding-top: 10px;
     gap: 10px;
     color: lightgrey;
     margin: 5px 0 20px 0;
