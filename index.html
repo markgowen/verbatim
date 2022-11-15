@@ -4,9 +4,24 @@
         <title>Phase-1 Project</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
         <script defer src="src/index.js"></script>
     </head>
     <body>
+        <section id="left-container">
+            <h2 id="logo">verbatim</h2>
+            <div id="search-box">
+                <input type="text" id="search-term" placeholder="Type the word here.." />
+                <button id="search-btn">Search</button>
+            </div>
+        </section>
+        <section id="right-container">
+            <div id="dark-mode">
+                <img src="/assets/dark-mode.png" class="dark-mode-icon" />
+            </div>
+            <div id="result">
+                <audio id="sound"></audio>
+            </div>
+        </section>
     </body>
 </html>
