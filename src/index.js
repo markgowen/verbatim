@@ -8,9 +8,9 @@ function init() {
         fetch(`${url}${searchTerm}`)
         .then(res => res.json())
         .then(data => renderResult(data[0]))
-        // .catch(() => {
-        //     result.innerHTML = "Could not find word"
-        // })
+        .catch(() => {
+            result.innerHTML = "Could not find word"
+        })
     })
 }
 
@@ -39,8 +39,7 @@ function renderResult(element) {
     
     const phonetic = document.createElement("p");
     phonetic.innerHTML = element.phonetic || element.phonetics.find((p) => {
-        return p.text
-    }).text;
+        return p.text}).text;
     
     const partOfSpeech = document.createElement("p");
     partOfSpeech.innerText = element.meanings[0].partOfSpeech;

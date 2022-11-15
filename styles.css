@@ -64,8 +64,9 @@
     border-radius: 5px;
     font-size: 16px;
 }
-.dark-mode button {
-    color: #222;
+.dark-mode .search-box button {
+    color: #fefefe;
+    background-color: #2e2751 
 }
 /* Right portion of application */
 .right-container {
@@ -74,8 +75,8 @@
 .dark-mode-icon {
     background: url(/assets/dark-mode.png);
     background-size: cover;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     float: right;
     margin-right: 40px;
     margin-top: 10px;
@@ -123,8 +124,7 @@
 }
 .example {
     display: flex;
-    
-font-style: italic;
+    font-style: italic;
     border-left: 5px solid #ae9cff;
     padding-left: 20px;
     margin-top: 30px;
@@ -135,5 +135,6 @@ font-style: italic;
 
 button {
     cursor: pointer;
+    
 }
 
