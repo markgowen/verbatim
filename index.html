@@ -4,9 +4,43 @@
         <title>Phase-1 Project</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        <!-- Google Fonts -->
+        <!-- Stylesheet -->
+        <link href="styles.css" rel="stylesheet">
         <script defer src="src/index.js"></script>
     </head>
     <body>
+        <div class="dark-mode"></div>
+        <audio id="sound"></audio>
+        <div class="split left-container">
+            <h2 id="logo">verbatim</h2>
+            <div class="search-box">
+                <input type="text" id="search-term" placeholder="Type the word here.." />
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+        <div class="split right-container">
+            <button class="dark-mode-icon"></button>
+            <div class="result" id="result">
+                <div class="word">
+                    <!-- <h3>Sample</h3>
+                    <button>
+                        <i class="fas fa-volume-up"></i>
+                    </button> -->
+                </div>
+                <div class="details">
+                    <!-- <p>pos</p>
+                    <p>|sample|</p> -->
+                </div>
+                <div class="word-def">
+                    <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, nostrum? -->
+                </div>
+                <div class="example">
+                    <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, veniam. -->
+                </div>
+            </div>
+        </div>
     </body>
 </html>
