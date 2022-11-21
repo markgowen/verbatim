@@ -2,6 +2,14 @@ function init() {
     const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
     const btn = document.querySelector("#search-btn");
     
+    btn.addEventListener("mouseover", (e) => {
+        e.target.style.color = "grey";
+
+        setTimeout(() => {
+            e.target.style.color = "";
+        }, 500);
+    }, false);
+
     btn.addEventListener("click", () => {
         let searchTerm = document.querySelector("#search-term").value;
         
@@ -81,11 +89,12 @@ function playSound() {
 }
 
 function darkMode() {
-    const darkModeIcon = document.querySelector(".dark-mode-icon");
-
-    darkModeIcon.addEventListener("click", () => {
-        const element = document.body;
-        element.classList.toggle("dark-mode")
+    let darkModeIcon = document.querySelector(".dark-mode-icon");
+    
+    darkModeIcon.addEventListener("dblclick", () => {
+        let element = document.querySelector("body")
+        element.classList.toggle("dark-mode");
+        console.log("toggled")
     })
 }
 
